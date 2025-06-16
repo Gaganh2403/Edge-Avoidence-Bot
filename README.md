@@ -4,7 +4,7 @@ This project is a smart 4-wheel edge-avoidance robot that uses **dual ultrasonic
 
 ---
 
-## 📷 Project Images
+##  Project Images
 
 | Front View | Sensor Mount |
 |------------|---------------|
@@ -66,7 +66,7 @@ This project is a smart 4-wheel edge-avoidance robot that uses **dual ultrasonic
 | Left        | A0       | A1       |
 | Right       | A2       | A3       |
 
-### ⚙ Motors (via AFMotor):
+###  Motors (via AFMotor):
 | Motor Position   | Channel |
 |------------------|---------|
 | Left Front       | M1      |
@@ -84,13 +84,6 @@ Main logic includes:
 - Setting motor directions using `AF_DCMotor` methods
 
 **Default speed is set to `60`** for stable motion.
-
----
-
-##  Acknowledgments
-
-Special thanks to my mentor **[Insert Mentor's Name]** for guiding me through this project.  
-And sincere appreciation to **[Insert Company Name]** for providing the kit and learning platform.
 
 ---
 
