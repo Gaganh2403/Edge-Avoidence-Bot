@@ -100,8 +100,6 @@ This project is open-source under the [MIT License](LICENSE).
 
 ---
 
-##  Author
-
-**Your Name**  
-[LinkedIn](https://www.linkedin.com/in/your-profile) | [GitHub](https://github.com/your-username)
+##  Author  
+[LinkedIn](https://www.linkedin.com/in/gagan-h-ba69a9328/) | [GitHub](https://github.com/Gaganh2403)
 
