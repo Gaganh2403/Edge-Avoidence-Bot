@@ -1,98 +1,83 @@
-# Edge Avoidance Robot using Ultrasonic Sensors and Arduino
+# 🤖 Edge Avoidance Bot
 
-This project is a smart 4-wheel edge-avoidance robot that uses **dual ultrasonic sensors** and **motor driver logic** to detect edges, obstacles, and prevent falls. The bot intelligently decides whether to move forward, reverse, or turn based on the sensor data.
+An Arduino-based autonomous robot that uses **ultrasonic sensors** to detect edges (such as table ends or stairs) and avoid falling off by making real-time motor decisions.
 
----
-
-##  Project Images
-
-| Front View | Sensor Mount |
-|------------|---------------|
-| ![Front](./images/front.jpg) | ![Sensor](./images/sensor_mount.jpg) |
-
-*(Replace the above with actual image paths from your repo)*
+![Bot Image](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Images/robot.jpg?raw=true)
 
 ---
 
-## Features
+## 📌 Table of Contents
 
-- Dual **HC-SR04** ultrasonic sensors (left & right)
-- Smart edge detection using **NewPing** library
-- Controlled via **Arduino UNO**
-- Motor control via **L293D Motor Driver Shield**
-- Autonomous movement: Forward, Reverse, Left Turn, Right Turn
-- Custom logic for perfect turning (one side forward, other backward)
-
----
-
-##  How It Works
-
-- If both sensors detect a distance > 15 cm → Move **forward**
-- If both detect a gap (≤15 cm) → **Stop**, **reverse**, and **right turn**
-- If only right detects a gap → **Left turn** and move forward
-- If only left detects a gap → **Right turn** and move forward
+- [About the Project](#about-the-project)
+- [Components Used](#components-used)
+- [Working Principle](#working-principle)
+- [Circuit Diagram](#circuit-diagram)
+- [Code Explanation](#code-explanation)
+- [Demo](#demo)
+- [How to Run](#how-to-run)
+- [Future Improvements](#future-improvements)
+- [Contributors](#contributors)
 
 ---
 
-##  Components Used
+## 📖 About the Project
 
-| Component            | Quantity |
-|----------------------|----------|
-| Arduino UNO          | 1        |
-| L293D Motor Driver Shield | 1  |
-| HC-SR04 Ultrasonic Sensor | 2  |
-| DC Gear Motors       | 4        |
-| Robot Chassis        | 1        |
-| Wheels               | 4        |
-| 9V or 12V Battery Pack | 1      |
-| Jumper Wires         | -        |
+The **Edge Avoidance Bot** is a simple embedded systems project designed to prevent a robot from falling off edges using **two ultrasonic sensors**. The robot makes intelligent movement decisions based on sensor feedback — moving forward, turning, or backing away — to ensure safety on elevated surfaces.
 
 ---
 
-##  Arduino Libraries Used
+## 🔧 Components Used
 
-- [NewPing](https://github.com/ErickSimoes/NewPing) – for accurate ultrasonic sensing
-- AFMotor (for L293D Motor Driver Shield)
-
->  Install via Library Manager in Arduino IDE
-
----
-
-##  Pin Configuration
-
-###  Ultrasonic Sensors:
-| Sensor      | TRIG Pin | ECHO Pin |
-|-------------|----------|----------|
-| Left        | A0       | A1       |
-| Right       | A2       | A3       |
-
-###  Motors (via AFMotor):
-| Motor Position   | Channel |
-|------------------|---------|
-| Left Front       | M1      |
-| Left Rear        | M2      |
-| Right Front      | M3      |
-| Right Rear       | M4      |
+| Component              | Quantity |
+|------------------------|----------|
+| Arduino Uno            | 1        |
+| Ultrasonic Sensor (HC-SR04) | 2        |
+| Motor Driver Module (L298N) | 1        |
+| DC Motors              | 2        |
+| Chassis & Wheels       | 1 Set    |
+| Power Supply (Battery) | 1        |
+| Jumper Wires           | As needed |
+| Breadboard (optional)  | 1        |
 
 ---
 
-##  Arduino Code Overview
+## ⚙️ Working Principle
 
-Main logic includes:
-- Reading distances via `sonarLeft.ping_cm()` and `sonarRight.ping_cm()`
-- Deciding motion type
-- Setting motor directions using `AF_DCMotor` methods
-
-**Default speed is set to `60`** for stable motion.
+- **Two Ultrasonic Sensors** are placed at the left and right front edges of the robot.
+- If **both sensors detect close proximity** (e.g., less than 10 cm), the bot moves **backward**.
+- If only **one sensor detects an edge**, the bot turns in the opposite direction.
+- If **no edge is detected**, it moves **forward**.
 
 ---
 
-##  License
+## 🔌 Circuit Diagram
 
-This project is open-source under the [MIT License](LICENSE).
+![Circuit](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Images/circuit%20connection.png?raw=true)
 
 ---
 
-##  Author  
-[LinkedIn](https://www.linkedin.com/in/gagan-h-ba69a9328/) | [GitHub](https://github.com/Gaganh2403)
+## 📜 Code Explanation
 
+- The code uses the **NewPing library** to handle ultrasonic sensors.
+- Distance is measured using `ping_cm()` method.
+- Motor movement is controlled using digital pins connected to the **L298N motor driver**.
+
+> Refer to [`code.ino`](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/code.ino) for full implementation.
+
+---
+
+## 🎥 Demo
+
+Watch a working demo of the bot in action:
+
+[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
+
+> Replace with actual video link if available.
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Gaganh2403/Edge-Avoidence-Bot.git
