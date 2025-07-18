@@ -2,7 +2,7 @@
 
 An Arduino-based autonomous robot that uses **ultrasonic sensors** to detect edges (such as table ends or stairs) and avoid falling off by making real-time motor decisions.
 
-![Bot Image](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Images/image(1).jpg?raw=true)
+![Bot Image](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/image1(2).jpg?raw=true)
 
 ---
 
