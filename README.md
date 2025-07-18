@@ -1,8 +1,8 @@
 # 🤖 Edge Avoidance Bot
 
-An Arduino-based autonomous robot that uses **ultrasonic sensors** to detect edges (such as table ends or stairs) and avoid falling off by making real-time motor decisions.
+An Arduino-based autonomous robot that uses **ultrasonic sensors** to detect edges (like table ends or stairs) and avoid falling using real-time obstacle logic.
 
-![Bot Image](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/image1(2).jpg?raw=true)
+![Bot Image](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/image1%20(1).jpg?raw=true)
 
 ---
 
@@ -22,62 +22,62 @@ An Arduino-based autonomous robot that uses **ultrasonic sensors** to detect edg
 
 ## 📖 About the Project
 
-The **Edge Avoidance Bot** is a simple embedded systems project designed to prevent a robot from falling off edges using **two ultrasonic sensors**. The robot makes intelligent movement decisions based on sensor feedback — moving forward, turning, or backing away — to ensure safety on elevated surfaces.
+The **Edge Avoidance Bot** is a basic embedded systems project that prevents a robot from falling off edges using **ultrasonic sensors**. It makes intelligent movement decisions—forward, backward, or turning—based on sensor feedback, making it ideal for table-top or elevated environments.
 
 ---
 
 ## 🔧 Components Used
 
-| Component              | Quantity |
-|------------------------|----------|
-| Arduino Uno            | 1        |
-| Ultrasonic Sensor (HC-SR04) | 2        |
-| Motor Driver Module (L298N) | 1        |
-| DC Motors              | 2        |
-| Chassis & Wheels       | 1 Set    |
-| Power Supply (Battery) | 1        |
-| Jumper Wires           | As needed |
-| Breadboard (optional)  | 1        |
+| Component                  | Quantity |
+|----------------------------|----------|
+| Arduino Uno                | 1        |
+| Ultrasonic Sensor (HC-SR04)| 2        |
+| Motor Driver (L298N)       | 1        |
+| DC Motors                  | 2        |
+| Wheels & Chassis           | 1 Set    |
+| Power Source (Battery)     | 1        |
+| Jumper Wires               | As needed |
+| Breadboard (optional)      | 1        |
 
 ---
 
 ## ⚙️ Working Principle
 
-- **Two Ultrasonic Sensors** are placed at the left and right front edges of the robot.
-- If **both sensors detect close proximity** (e.g., less than 10 cm), the bot moves **backward**.
-- If only **one sensor detects an edge**, the bot turns in the opposite direction.
-- If **no edge is detected**, it moves **forward**.
+- Two **ultrasonic sensors** are mounted at the front edge of the bot.
+- If **both sensors** detect a short distance (<10 cm), the bot moves **backward**.
+- If only **one sensor** detects the edge, it turns in the opposite direction.
+- If **no edge** is detected, it moves **forward**.
 
 ---
 
 ## 🔌 Circuit Diagram
 
-![Circuit](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Images/circuit%20connection.png?raw=true)
+![Circuit](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/image1%20(2).jpg?raw=true)
 
 ---
 
 ## 📜 Code Explanation
 
-- The code uses the **NewPing library** to handle ultrasonic sensors.
-- Distance is measured using `ping_cm()` method.
-- Motor movement is controlled using digital pins connected to the **L298N motor driver**.
+- Uses the **NewPing** library for ultrasonic distance measurement.
+- `ping_cm()` is used to get the current distance from each sensor.
+- Motor control pins are toggled via digital output from the Arduino based on logic decisions.
 
-> Refer to [`code.ino`](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/code.ino) for full implementation.
+> Refer to [`Code.txt`](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Code.txt) for the complete Arduino sketch.
 
 ---
 
 ## 🎥 Demo
 
-Watch a working demo of the bot in action:
+Here’s a quick demo of the bot avoiding edges:
 
-[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
+▶️ [Click to watch video](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/video.mp4)
 
-> Replace with actual video link if available.
+> GitHub plays `.mp4` videos inline when viewed in the browser.
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repo:
+1. Clone this repository:
    ```bash
    git clone https://github.com/Gaganh2403/Edge-Avoidence-Bot.git
