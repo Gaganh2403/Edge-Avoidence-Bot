@@ -52,7 +52,7 @@ The **Edge Avoidance Bot** is a basic embedded systems project that prevents a r
 
 ## 🔌 Circuit Diagram
 
-![Circuit](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/image1%20(2).jpg?raw=true)
+![Circuit Diagram](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Circuit%20daigram/circuit_image.png?raw=true)
 
 ---
 
@@ -70,9 +70,9 @@ The **Edge Avoidance Bot** is a basic embedded systems project that prevents a r
 
 Here’s a quick demo of the bot avoiding edges:
 
-▶️ [Click to watch video](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/video.mp4)
+▶️ [Watch video](https://github.com/Gaganh2403/Edge-Avoidence-Bot/blob/main/Image/video.mp4)
 
-> GitHub plays `.mp4` videos inline when viewed in the browser.
+> GitHub plays `.mp4` videos inline when viewed in a browser.
 
 ---
 
